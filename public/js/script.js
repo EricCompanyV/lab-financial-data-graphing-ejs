@@ -5,3 +5,9 @@ document.addEventListener(
   },
   false
 );
+
+const selectDate = document.querySelector('.date-picker');
+
+selectDate.addEventListener('change', (event) => {
+  coinbaseAPI()
+});
