@@ -10,18 +10,52 @@
 
   <body>
     <%- body %>
+
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <div>
+        <h2>Filters</h2>
+
+        <form style="margin-bottom: 10px">
+          <label>
+            Start date
+            <input
+              type="date"
+              id="start-date"
+              value="2020-07-22"
+              class="date-picker"
+            />
+          </label>
+          <label>
+            End date
+            <input
+              type="date"
+              id="end-date"
+              value="2021-07-22"
+              class="date-picker"
+            />
+          </label>
+        </form>
+        <div style="display:flex; flex-direction:row;justify-content:flex-start">
+          <h3>Currency:</h3>
+          <select id="currency-selected" style="height:50%; align-items: center;margin-top:4%">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+            <option value="RUB">RUB</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <h2>Values</h2>
+        <div id="max-value">Max: ......... USD</div>
+        <div id="min-value">Min: ......... USD</div>
+      </div>
+    </div>
+
     <canvas id="my-chart"></canvas>
-
-    <form >
-      <label > Start date
-        <input type="date" id="start-date" value="2020-07-22" class="date-picker">
-      </label>
-      <label > End date
-        <input type="date" id="end-date" value="2021-07-22" class="date-picker">
-      </label>
-
-      <button type="submit">Send dates</button>
-    </form>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>

@@ -6,8 +6,17 @@ document.addEventListener(
   false
 );
 
-const selectDate = document.querySelector('.date-picker');
+const selectDateStart = document.getElementById('start-date');
+const selectDateEnd = document.getElementById('end-date');
+const currencySelected = document.getElementById("currency-selected")
 
-selectDate.addEventListener('change', (event) => {
+selectDateStart.addEventListener('input', (event) => {
+  coinbaseAPI()
+});
+selectDateEnd.addEventListener('input', (event) => {
+  coinbaseAPI()
+});
+
+currencySelected.addEventListener('change', (event) => {
   coinbaseAPI()
 });
